@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting to Roblox...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const placeId = params.get("placeId");
+    const jobId = params.get("jobId");
+
+    if (placeId && jobId) {
+      const robloxLink = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
+      window.location.href = robloxLink;
+    } else {
+      document.write("<p>Missing placeId or jobId in the URL.</p>");
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to Roblox...</p>
+</body>
+</html>
